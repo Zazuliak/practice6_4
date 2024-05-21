@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Форма реєстрації</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <h1>Форма реєстрації нового користувача</h1>
-    <form method="POST" action="process_registration.php">
+    <form id="registrationForm" method="POST" action="process_registration.php">
       <label for="username">Ім'я користувача:</label>
       <input type="text" id="username" name="username" required /><br /><br />
 
@@ -31,5 +32,14 @@
       <input type="submit" value="Зареєструватися" />
       <input type="reset" value="Скинути" />
     </form>
+
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <p>Успішна реєстрація!</p>
+      </div>
+    </div>
+
+    <script src="scripts.js"></script>
   </body>
 </html>
